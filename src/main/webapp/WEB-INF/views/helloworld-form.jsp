@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Helloworld - Input Form</title>
+    <script src="${pageContext.request.contextPath}/static/js/simple-test.js" defer ></script>
 </head>
 <body>
 
