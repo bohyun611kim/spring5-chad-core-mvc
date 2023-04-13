@@ -1,11 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>main</title>
 </head>
 <body>
-회원등록<br>
-
-접속시각 : ${theTime}
+<h2>SPRING MVC HOME</h2>
 </body>
 </html>
