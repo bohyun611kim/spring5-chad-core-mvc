@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+@RequestMapping("/hello")
 @Controller
 public class HelloWorldController {
 
@@ -28,6 +29,8 @@ public class HelloWorldController {
 
         // create the message
         String result = "Yo! " + theName;
+        System.out.println("--- result = " + result);
+
 
         // add message to the model
         model.addAttribute("message", result);

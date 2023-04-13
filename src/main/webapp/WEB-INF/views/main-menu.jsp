@@ -14,9 +14,12 @@
 
 <h2>Spring MVC Demo - Home Page</h2>
 
-<a href="showForm">Plain Hello World</a>
+<a href="hello/showForm">Hello World</a>
 
 <br><br>
+<a href="silly/showForm">Silly </a>
+<br><br>
+
 
 <img src="${pageContext.request.contextPath}/resources/static/images/cat1.jpg"/>
 
