@@ -17,6 +17,10 @@
 <a href="hello/showForm">Hello World</a>
 
 <br><br>
+
+<a href="student/showForm">Student form </a>
+<br><br>
+
 <a href="silly/showForm">Silly </a>
 <br><br>
 
