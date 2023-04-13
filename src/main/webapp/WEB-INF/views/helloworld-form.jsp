@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="helloworld.jsp" method="get">
+<form action="${pageContext.request.contextPath}/processForm" method="get">
     <input type="text" name="studentName" placeholder="what's your name">
     <input type="submit"/>
 </form>
