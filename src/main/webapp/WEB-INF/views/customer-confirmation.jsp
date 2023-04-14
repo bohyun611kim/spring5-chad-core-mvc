@@ -11,7 +11,10 @@
 <body id="confirmation-body">
 
 <p id="confirmation">The Customer is confirmed: ${customer.firstName} ${customer.lastName} </p>
+<br>
 
+<p>FreePasses: ${customer.freePasses}</p>
+<br>
 </body>
 
 </html>
