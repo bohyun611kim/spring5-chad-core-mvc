@@ -1,5 +1,8 @@
 package com.luv2code.springdemo.rest;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Student {
 
     private int id;
