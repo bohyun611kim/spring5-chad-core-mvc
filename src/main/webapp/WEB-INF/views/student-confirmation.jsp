@@ -13,8 +13,11 @@
 <p id="confirmation">The student is confirmed: ${student.firstName} ${student.lastName} </p>
 <br>
 
-Country : ${student.country}
-<br>
+Country: ${student.country}
+<br><br>
+
+favoriteLanguage: ${student.favoriteLanguage}
+<br><br>
 
 </body>
 
