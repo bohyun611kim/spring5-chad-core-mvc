@@ -39,6 +39,10 @@ public class CustomerController {
 
         System.out.println("Last name: |" + theCustomer.getLastName() + "|"); // whitespace 검증을위함
 
+        System.out.println("Binding result: " + theBindingResult);
+
+        System.out.println("\n\n\n");
+
         if (theBindingResult.hasErrors()) {
             return "customer-form";
         }
