@@ -26,7 +26,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/showForm")
-    public java.lang.String showForm(Model theModel) {
+    public String showForm(Model theModel) {
         System.out.println("--- /showForm");
         theModel.addAttribute("customer", new Customer());
 
@@ -34,7 +34,7 @@ public class CustomerController {
     }
 
     @RequestMapping("/processForm")
-    public java.lang.String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
+    public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
         BindingResult theBindingResult) {
 
         System.out.println("Last name: |" + theCustomer.getLastName() + "|"); // whitespace 검증을위함
