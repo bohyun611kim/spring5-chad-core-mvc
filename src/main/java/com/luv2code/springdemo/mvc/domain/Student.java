@@ -9,6 +9,20 @@ public class Student {
 
     private String country;
 
+    private LinkedHashMap<String, String> countryOptions;
+
+    public Student() {
+        // ISO country code 국가를 가져온다.
+        countryOptions = new LinkedHashMap<String, String>();
+
+        countryOptions.put("BR", "Brazil");
+        countryOptions.put("FR", "France");
+        countryOptions.put("DE", "Germany");
+        countryOptions.put("KR", "Korea");
+        countryOptions.put("US", "United States of America");
+
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -31,5 +45,13 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public LinkedHashMap<String, String> getCountryOptions() {
+        return countryOptions;
+    }
+
+    public void setCountryOptions(LinkedHashMap<String, String> countryOptions) {
+        this.countryOptions = countryOptions;
     }
 }
