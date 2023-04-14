@@ -11,11 +11,22 @@ public class Driver {
         ObjectMapper mapper = new ObjectMapper();
 
         try {
-
-            Student theStudent = mapper.readValue(new File("data/sample-lite.json"), Student.class);
+            // read json from file and map/convert to java pojo
+            Student theStudent = mapper.readValue(new File("data/sample-full.json"), Student.class);
 
             System.out.println("First name: " + theStudent.getFirstName());
             System.out.println("Last name: " + theStudent.getLastName());
+
+            // print out address : street and city
+            Address theAddress = theStudent.getAddress();
+            System.out.println(theAddress.getStreet());
+            System.out.println(theAddress.getCity());
+
+            System.out.println("-------");
+            for(String theLanguage : theStudent.getLanguages()) {
+                System.out.println(theLanguage);
+            }
+
 
 
         } catch (IOException e) {
