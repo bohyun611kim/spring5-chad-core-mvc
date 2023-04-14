@@ -7,15 +7,25 @@
 
 <form:form action="${pageContext.request.contextPath}/student/processForm" modelAttribute="student">
 
-    First name: <form:input path="firstName" />
+    First name: <form:input path="firstName"/>
 
     <br><br>
 
-    Last name: <form:input path="lastName" />
+    Last name: <form:input path="lastName"/>
 
     <br><br>
 
-    <input type="submit" value="Submit" />
+    Country:
+    <form:select path="country">
+        <form:option value="Brazil" label="Brazil"/>
+        <form:option value="France" label="France"/>
+        <form:option value="Corea" label="Corea"/>
+        <form:option value="China" label="China"/>
+    </form:select>
+
+    <br><br>
+
+    <input type="submit" value="Submit"/>
 
 </form:form>
 

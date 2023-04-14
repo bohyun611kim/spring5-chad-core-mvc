@@ -11,7 +11,9 @@
 <body id="confirmation-body">
 
 <p id="confirmation">The student is confirmed: ${student.firstName} ${student.lastName} </p>
+<br>
 
+Country : ${student.country}
 </body>
 
 </html>
