@@ -16,8 +16,16 @@
 Country: ${student.country}
 <br><br>
 
-favoriteLanguage: ${student.favoriteLanguage}
+Favorite Language: ${student.favoriteLanguage}
 <br><br>
+
+Operating Systems:
+<ul>
+
+    <c:forEach var="targetOS" items="${student.operatingSystems}">
+        <li>${targetOS}</li>
+    </c:forEach>
+</ul>
 
 </body>
 
