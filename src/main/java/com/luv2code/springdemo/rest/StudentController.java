@@ -5,9 +5,13 @@ import com.luv2code.springdemo.entity.Student2;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -35,8 +39,41 @@ public class StudentController {
     @GetMapping("/students/{studentId}")
     public Student2 getStudent(@PathVariable int studentId) {
         System.out.println("--- studentId: " + studentId);
-    
+
+        // check the studentId against lise size
+        if (studentId >= theStudents.size() || studentId < 0) {
+            throw new StudentNotFoundException("Student id not found - " + studentId); // 사용자정의 예외를 던진다.
+        }
+
         return theStudents.get(studentId);
+    }
+
+
+    @ExceptionHandler
+    public ResponseEntity<StudentErrorResponse> handleResponse(StudentNotFoundException exc) {
+
+        StudentErrorResponse error = new StudentErrorResponse();
+
+        error.setStatus(HttpStatus.BAD_REQUEST.value());
+        error.setMessage(exc.getMessage());
+        error.setTimeStamp(System.currentTimeMillis());
+
+        System.out.println("--- StudentNotFoundException");
+
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<StudentErrorResponse> handleException(Exception exc) {
+
+        StudentErrorResponse error = new StudentErrorResponse();
+        error.setStatus(HttpStatus.BAD_REQUEST.value());
+        error.setMessage(exc.getMessage());
+        error.setTimeStamp(System.currentTimeMillis());
+
+        System.out.println("--- Exception");
+
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
 }
