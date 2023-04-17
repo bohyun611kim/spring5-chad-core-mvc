@@ -14,10 +14,14 @@
 
 <h2>Spring MVC Demo - Home Page</h2>
 
-<a href="hello/showForm">Hello World</a>
+<a href="${pageContext.request.contextPath}/hello/showForm">Hello World</a>
 
 <br><br>
+
 <a href="silly/showForm">Silly </a>
+<br><br>
+
+<a href="${pageContext.request.contextPath}/test/hello">Spring Rest DEMO </a>
 <br><br>
 
 
