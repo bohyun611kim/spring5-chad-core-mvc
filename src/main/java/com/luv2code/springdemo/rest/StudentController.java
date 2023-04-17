@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -49,6 +48,9 @@ public class StudentController {
     }
 
 
+    /*
+        studentId : index 범위를 예외처리
+     */
     @ExceptionHandler
     public ResponseEntity<StudentErrorResponse> handleResponse(StudentNotFoundException exc) {
 
@@ -63,6 +65,9 @@ public class StudentController {
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
+    /*
+        studentId : abc 잘못된 타입 처리
+     */
     @ExceptionHandler
     public ResponseEntity<StudentErrorResponse> handleException(Exception exc) {
 
@@ -73,7 +78,7 @@ public class StudentController {
 
         System.out.println("--- Exception");
 
-        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST); // body, statusCode
     }
 
 }
