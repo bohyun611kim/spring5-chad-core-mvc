@@ -24,6 +24,9 @@
 <a href="${pageContext.request.contextPath}/test/hello">Spring Rest DEMO </a>
 <br><br>
 
+<a href="${pageContext.request.contextPath}/api/students">Students List </a>
+<br><br>
+
 
 <img src="${pageContext.request.contextPath}/resources/static/images/cat1.jpg"/>
 
