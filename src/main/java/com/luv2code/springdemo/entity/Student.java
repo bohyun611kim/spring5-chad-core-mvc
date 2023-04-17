@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.rest;
+package com.luv2code.springdemo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

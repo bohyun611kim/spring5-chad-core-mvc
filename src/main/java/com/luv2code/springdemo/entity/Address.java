@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.rest;
+package com.luv2code.springdemo.entity;
 
 public class Address {
 
