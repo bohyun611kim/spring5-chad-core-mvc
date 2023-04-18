@@ -42,6 +42,20 @@
       <version>${org.aspectj-version}</version>
     </dependency>
 
+    <!-- Spring-Aop -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>5.0.4.RELEASE</version>
+    </dependency>
+
+    <!-- Spring-Aspects -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>5.0.4.RELEASE</version>
+    </dependency>
+
     <!-- Logging -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>

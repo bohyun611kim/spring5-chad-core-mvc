@@ -6,8 +6,9 @@
         <fileset id="web dispatcher servlet context" name="MVC dispatcher servlet context" removed="true">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/config/servlet-context.xml</file>
         </fileset>
-        <fileset id="fileset" name="Spring Application Context1" removed="false">
+        <fileset id="fileset2" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/config/application-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext1.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/config/servlet-context.xml</file>
         </fileset>
       </configuration>
