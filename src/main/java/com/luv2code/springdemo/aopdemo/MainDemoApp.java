@@ -1,4 +1,4 @@
-package com.luv2code.springdemo;
+package com.luv2code.springdemo.aopdemo;
 
 import com.luv2code.springdemo.aopdemo.config.DemoConfig;
 import com.luv2code.springdemo.aopdemo.dao.AccountDAO;
