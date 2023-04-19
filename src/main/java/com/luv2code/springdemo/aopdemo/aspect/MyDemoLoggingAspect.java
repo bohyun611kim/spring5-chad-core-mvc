@@ -3,20 +3,26 @@ package com.luv2code.springdemo.aopdemo.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class MyDemoLoggingAspect {
 
-    // this is where we add all of our related advices for logging
-
-    // let's start with an @Before advice
-
-    @Before("execution(public void addAccount())")
-    public void beforeAddAccountAdvice() {
-
-        System.out.println("\n=====>>> 거쳐간다 Executing @Before advice on addAccount()");
-
+    @Pointcut("execution(* com.luv2code.springdemo.aopdemo.dao.*.*(..))")
+    private void forDaoPackage() {
     }
+
+    @Before("forDaoPackage()")
+    public void beforeAddAccountAdvice() {
+        System.out.println("\n=====>>> Executing @Before advice on method");
+    }
+
+    @Before("forDaoPackage()")
+    public void performApiAnalytics() {
+        System.out.println("\n=====>>> Performing API analytics");
+    }
+
+
 }
