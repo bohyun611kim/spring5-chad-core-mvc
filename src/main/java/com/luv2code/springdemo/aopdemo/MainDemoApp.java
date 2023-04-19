@@ -22,13 +22,11 @@ public class MainDemoApp {
             context.getBean("membershipDAO", MembershipDAO.class);
 
         // call the business method
-        Account myAccount = new Account();
-        theAccountDAO.addAccount(myAccount, true);
-        theAccountDAO.doWork();
+        Account theAccount = new Account();
+        theAccountDAO.addAccount(theAccount, true);
 
-        // call the membership business method
+        // call the business method
         theMembershipDAO.addSillyMember();
-        theMembershipDAO.goToSleep();
 
         // close the context
         context.close();

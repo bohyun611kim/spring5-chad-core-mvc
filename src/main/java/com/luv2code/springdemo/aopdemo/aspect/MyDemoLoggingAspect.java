@@ -3,26 +3,19 @@ package com.luv2code.springdemo.aopdemo.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class MyDemoLoggingAspect {
 
-    @Pointcut("execution(* com.luv2code.springdemo.aopdemo.dao.*.*(..))")
-    private void forDaoPackage() {
-    }
+    // addXXX 함수 호출전에 이곳을 거쳐간다.
 
-    @Before("forDaoPackage()")
+    @Before("execution(* add*(com.luv2code.springdemo.aopdemo.entiry.Account, ..))")
     public void beforeAddAccountAdvice() {
-        System.out.println("\n=====>>> Executing @Before advice on method");
-    }
 
-    @Before("forDaoPackage()")
-    public void performApiAnalytics() {
-        System.out.println("\n=====>>> Performing API analytics");
-    }
+        System.out.println("\n=====>>> ################################  Executing @Before advice on method");
 
+    }
 
 }

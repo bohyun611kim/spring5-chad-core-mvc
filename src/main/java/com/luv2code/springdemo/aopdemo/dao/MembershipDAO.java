@@ -5,15 +5,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class MembershipDAO {
 
+    // 적용 method 아님 : 파라미터 값 불일치
     public boolean addSillyMember() {
 
-        System.out.println(getClass() + " ");
+        System.out.println(getClass() + ": DOING STUFF: ADDING A MEMBERSHIP ACCOUNT");
 
         return true;
-    }
-
-    public void goToSleep() {
-
-        System.out.println(getClass() + ": I'm going to sleep now...만사가 귀찮어");
     }
 }
