@@ -35,7 +35,7 @@
     <Logger name="com.luv2code.springdemo" level="INFO" additivity="false">
       <AppenderRef ref="Console_Appender"/>
     </Logger>
-    <Logger name="org.springframework" level="DEBUG" additivity="false">
+    <Logger name="org.springframework" level="INFO" additivity="false">
       <AppenderRef ref="Console_Appender"/>
     </Logger>
   </Loggers>

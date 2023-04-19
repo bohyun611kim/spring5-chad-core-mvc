@@ -9,13 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoLoggingAspect {
 
-    // addXXX 함수 호출전에 이곳을 거쳐간다.
-
-    @Before("execution(* add*(com.luv2code.springdemo.aopdemo.entiry.Account, ..))")
+    @Before("execution(public void add*(..))")
     public void beforeAddAccountAdvice() {
-
-        System.out.println("\n=====>>> ################################  Executing @Before advice on method");
-
+        System.out.println("\n=====>>> Executing @Before advice on method");
     }
 
 }
