@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoLoggingAspect {
 
+    // returnType, params  : 적용할지 말지
     @Before("execution(public void add*(..))")
     public void beforeAddAccountAdvice() {
         System.out.println("\n=====>>> Executing @Before advice on method");
